@@ -1,2 +1,0 @@
-# experemental-coin
-experemental-coin

@@ -1,0 +1,24 @@
+{
+  "name": "experemental-coin",
+  "version": "1.0.0",
+  "description": "experemental-coin",
+  "main": "index.js",
+  "scripts": {
+    "compile": "truffleCompile.sh",
+    "migrate": "truffleMigrate.sh",
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitryRomaniuk/experemental-coin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DmitryRomaniuk/experemental-coin/issues"
+  },
+  "homepage": "https://github.com/DmitryRomaniuk/experemental-coin#readme",
+  "devDependencies": {
+    "truffle": "^3.4.9"
+  }
+}
