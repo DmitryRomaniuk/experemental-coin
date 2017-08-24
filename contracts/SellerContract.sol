@@ -1,6 +1,7 @@
 pragma solidity ^0.4.4;
 
 import "node_modules/zeppelin-solidity/contracts/lifecycle/Destructible.sol";
+import "node_modules/zeppelin-solidity/contracts/math/SafeMath.sol";
 
 contract SellerContract is Destructible {
     mapping (address => uint) balances;
