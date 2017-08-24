@@ -9,20 +9,20 @@ contract('BlockCoin', function(accounts) {
     });
   });
   it("should call a function that depends on a linked library", function() {
-    var meta;
-    var BlockCoinBalance;
-    var BlockCoinEthBalance;
+    var block;
+    var blockCoinBalance;
+    var blockCoinEthBalance;
 
     return BlockCoin.deployed().then(function(instance) {
-      meta = instance;
-      return meta.getBalance.call(accounts[0]);
+      block = instance;
+      return block.getBalance.call(accounts[0]);
     }).then(function(outCoinBalance) {
-      BlockCoinBalance = outCoinBalance.toNumber();
+      blockCoinBalance = outCoinBalance.toNumber();
       return meta.getBalanceInEth.call(accounts[0]);
     }).then(function(outCoinBalanceEth) {
-      BlockCoinEthBalance = outCoinBalanceEth.toNumber();
+      blockCoinEthBalance = outCoinBalanceEth.toNumber();
     }).then(function() {
-      assert.equal(BlockCoinEthBalance, 2 * BlockCoinBalance, "Library function returned unexpected function, linkage may be broken");
+      assert.equal(blockCoinEthBalance, 2 * blockCoinBalance, "Library function returned unexpected function, linkage may be broken");
     });
   });
   it("should send coin correctly", function() {
