@@ -1,24 +1,26 @@
 {
-  "name": "experemental-coin",
-  "version": "1.0.0",
-  "description": "experemental-coin",
-  "main": "index.js",
-  "scripts": {
-    "compile": "truffleCompile.sh",
-    "migrate": "truffleMigrate.sh",
-    "test": "truffle test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DmitryRomaniuk/experemental-coin.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DmitryRomaniuk/experemental-coin/issues"
-  },
-  "homepage": "https://github.com/DmitryRomaniuk/experemental-coin#readme",
-  "devDependencies": {
-    "truffle": "^3.4.9"
-  }
+    "name": "experemental-coin",
+    "version": "1.0.0",
+    "description": "experemental-coin",
+    "main": "index.js",
+    "scripts": {
+        "compile": "truffle compile",
+        "migrate": "truffle migrate",
+        "mist": "mist --rpc http://localhost:8545  --swarmurl \"null\"",
+        "test": "truffle test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DmitryRomaniuk/experemental-coin.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/DmitryRomaniuk/experemental-coin/issues"
+    },
+    "homepage": "https://github.com/DmitryRomaniuk/experemental-coin#readme",
+    "devDependencies": {
+        "truffle": "^3.4.9",
+        "zeppelin-solidity": "1.2.0"
+    }
 }

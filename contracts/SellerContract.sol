@@ -17,7 +17,7 @@ contract SellerContract is Destructible {
 	}
 
     function getBalanceInEth(uint256 amount) returns(uint){
-        require(conversion);
+        require(conversion > 0);
         return amount/conversion;
     }
 
