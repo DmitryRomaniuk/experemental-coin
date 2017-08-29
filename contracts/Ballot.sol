@@ -88,7 +88,7 @@ contract Ballot {
         // modifies `voters[msg.sender].voted`
         sender.voted = true;
         sender.delegate = to;
-        Voter delegate = voters[to];
+        Voter storage delegate = voters[to];
         if (delegate.voted) {
             // If the delegate already voted,
             // directly add to the number of votes
@@ -117,7 +117,7 @@ contract Ballot {
     /// @dev Computes the winning proposal taking all
     /// previous votes into account.
     function winningProposal() constant
-            returns (uint winningProposal)
+    returns (uint winningProposal)
     {
         uint winningVoteCount = 0;
         for (uint p = 0; p < proposals.length; p++) {
@@ -132,7 +132,7 @@ contract Ballot {
     // of the winner contained in the proposals array and then
     // returns the name of the winner
     function winnerName() constant
-            returns (bytes32 winnerName)
+    returns (bytes32 winnerName)
     {
         winnerName = proposals[winningProposal()].name;
     }
