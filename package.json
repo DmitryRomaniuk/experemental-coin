@@ -7,6 +7,7 @@
         "compile": "npm run clean && cd node_modules/.bin && truffle compile",
         "migrate": "npm run clean && cd node_modules/.bin && truffle migrate",
         "clean": "rm -rf ./build",
+        "attach": "geth attach rpc:http://localhost:8545",
         "mist": "mist --rpc http://localhost:8545 --swarmurl \"null\"",
         "testrpc": "testrpc --secure -u 0 -u 1 -u 2 -u 3 -u 4 -u 5 -u 6 -u 7 -u 8 -u 9",
         "geth_local": "cd \"c:/Program Files/Geth/\" && geth --rpc --dev --rpcapi admin,debug,miner,shh,txpool,personal,eth,net,web3 console",
